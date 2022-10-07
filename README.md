@@ -11,6 +11,8 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * __Snakify__: https://snakify.org/en/ A great, exercise based introduction to Python to complement slides/projects!
 
-* __Python Tutor__: a handy tool to help visualise your code's execution: https://pythontutor.com/visualize.html#mode=edit
+* __Python Tutor__: A handy tool to help visualise your code's execution: https://pythontutor.com/visualize.html#mode=edit
+
+* __Real Python__: Some of the internet's best resources for Python development: https://realpython.com/
 
 
