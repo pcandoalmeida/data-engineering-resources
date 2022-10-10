@@ -3,7 +3,7 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 ## Books
 
-* __Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems__; Kleppmann, Martin, 2016: A thorough albeit advanced classic in the field of Data Engineering: https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
+* __Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems__; Kleppmann, Martin, 2016: A thorough albeit __advanced classic__ in the field of Data Engineering: https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
 
 * __Fundamentals of Data Engineering__; Reiss, Joe; Housley, Matt, 2022: https://learning.oreilly.com/library/view/fundamentals-of-data/9781098108298/
 
