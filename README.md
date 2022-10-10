@@ -13,7 +13,7 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 😀 __Grokking Algorithms: An illustrated guide for programmers and other curious people__: Aditya Y. Bhargava, 2016: https://www.manning.com/books/grokking-algorithms
 
-* 🤓 __The Programmer's Brain: What every programmer needs to know about cognition__: Hermans, Feliene, 2021: https://www.manning.com/books/the-programmers-brain
+* 🤓 __The Programmer's Brain: What every programmer needs to know about cognition__: Hermans, Felienne, 2021: https://www.manning.com/books/the-programmers-brain
 
 * 😀 Video: https://youtu.be/FJn6_dCp-BM
 
