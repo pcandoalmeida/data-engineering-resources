@@ -7,6 +7,8 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * __Fundamentals of Data Engineering__; Reiss, Joe; Housley, Matt, 2022: https://learning.oreilly.com/library/view/fundamentals-of-data/9781098108298/
 
+* __Grokking Algorithms: An illustrated guide for programmers and other curious people__: Aditya Y. Bhargava, 2016: https://www.manning.com/books/grokking-algorithms
+
 ### Python
 
 * __Snakify__: https://snakify.org/en/ A great, exercise based introduction to Python to complement slides/projects!
