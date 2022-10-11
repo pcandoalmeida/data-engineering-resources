@@ -23,7 +23,7 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 😀 Video: https://youtu.be/FJn6_dCp-BM
 
-### Python
+## Python
 
 * 😀 __Snakify__: https://snakify.org/en/ A great, exercise based introduction to Python to complement slides/projects!
 
@@ -31,4 +31,6 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 😀 🤓 __Real Python__: Some of the internet's best resources for Python development: https://realpython.com/
 
+## Open Source
 
+* 😀 __Apache Airflow__: A friendly, DE focused project written in Python: https://github.com/apache/airflow
