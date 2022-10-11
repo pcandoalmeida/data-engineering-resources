@@ -13,9 +13,9 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 🤓 __How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh__: Dehghani, Zhamak, 2019: https://martinfowler.com/articles/data-monolith-to-mesh.html
 
-* 🤓 __Spotify Engineering__: https://engineering.atspotify.com/
+* 🤓 🤯 __Spotify Engineering__: https://engineering.atspotify.com/
 
-* 🤓 __Uber Engineering__: https://www.uber.com/en-GB/blog/london/engineering/
+* 🤓 🤯 __Uber Engineering__: https://www.uber.com/en-GB/blog/london/engineering/
 
 ## Books
 
