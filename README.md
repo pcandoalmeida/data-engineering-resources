@@ -11,6 +11,8 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 🤓 __The Downfall of the Data Engineer__: Beauchmin, Maxime, 2017: https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 
+* 🤓 __How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh__: Dehghani, Zhamak, 2019: https://martinfowler.com/articles/data-monolith-to-mesh.html
+
 * 🤓 __Spotify Engineering__: https://engineering.atspotify.com/
 
 * 🤓 __Uber Engineering__: https://www.uber.com/en-GB/blog/london/engineering/
