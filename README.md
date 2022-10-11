@@ -11,6 +11,10 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 🤓 __The Downfall of the Data Engineer__: Beauchmin, Maxime, 2017: https://maximebeauchemin.medium.com/the-downfall-of-the-data-engineer-5bfb701e5d6b
 
+* 🤓 __Spotify Engineering__: https://engineering.atspotify.com/
+
+* 🤓 __Uber Engineering__: https://www.uber.com/en-GB/blog/london/engineering/
+
 ## Books
 
 * 🤯 __Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems__: Kleppmann, Martin, 2016: A thorough albeit __advanced classic__ in the field of Data Engineering: https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
