@@ -2,7 +2,7 @@
 A public repository to hold recommended resources for the Generation Data Engineering 2022-2023 course
 
 - 😀 Beginner friendly!
-- 🤓 Deep dives into less beginner friendly territory, or subjects that will begin to stretch you!
+- 🤓 Deep dives into lesser beginner friendly territory, or subjects that will begin to stretch you!
 - 🤯 Brain explosions all over the place, but so worth it!
 
 ## Blogs/Articles
