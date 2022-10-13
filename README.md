@@ -29,6 +29,8 @@ A public repository to hold recommended resources for the Generation Data Engine
 
 * 😀 Video: https://youtu.be/FJn6_dCp-BM
 
+* 😀 __System Design Interview – An Insider's Guide__: Xu, Alex, 2020
+
 ## Python
 
 * 😀 __Snakify__: https://snakify.org/en/ A great, exercise based introduction to Python to complement slides/projects!
