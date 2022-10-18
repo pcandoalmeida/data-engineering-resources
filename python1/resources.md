@@ -19,3 +19,11 @@ https://pythontutor.com/render.html#code=task_count%20%3D%205%0A%0Adef%20increas
 String methods
 
 https://www.w3schools.com/python/python_strings_methods.asp
+
+List methods
+
+https://www.w3schools.com/python/python_lists_methods.asp
+
+Python Data Structures
+
+https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
