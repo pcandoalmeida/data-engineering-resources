@@ -15,3 +15,7 @@ https://pythontutor.com/visualize.html#code=task_count%20%3D%205%0A%0Adef%20incr
 Global Solution:
 
 https://pythontutor.com/render.html#code=task_count%20%3D%205%0A%0Adef%20increase_task_count%28%29%3A%0A%20%20%20%20global%20task_count%0A%20%20%20%20task_count%20%2B%3D%201%0A%0Aincrease_task_count%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false
+
+String methods
+
+https://www.w3schools.com/python/python_strings_methods.asp
