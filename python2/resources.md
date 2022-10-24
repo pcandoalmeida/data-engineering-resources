@@ -1,3 +1,10 @@
+### Loops
+
+Big-O notation in 5 minutes
+
+https://youtu.be/__vX2sjlpXU
+
+
 ### Dictionaries
 
 Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs
