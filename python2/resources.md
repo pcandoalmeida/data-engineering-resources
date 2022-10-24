@@ -8,3 +8,12 @@ Unlock The Power Variadic Arguments in Python Functions
 
 https://medium.com/spatial-data-science/unlock-the-power-variadic-arguments-in-python-functions-a591bf572c2
 
+### Exceptions
+
+Python Exceptions Mechanics
+
+https://www.w3schools.com/python/python_try_except.asp
+
+Python Tutorial: Using Try/Except Blocks for Error Handling
+
+https://youtu.be/NIWwJbo-9_8 
