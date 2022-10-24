@@ -17,3 +17,7 @@ https://www.w3schools.com/python/python_try_except.asp
 Python Tutorial: Using Try/Except Blocks for Error Handling
 
 https://youtu.be/NIWwJbo-9_8 
+
+Exception handling tips in Python Write better Python code (Intermediate - but a great channel you should follow!)
+
+https://youtu.be/ZsvftkbbrR0
