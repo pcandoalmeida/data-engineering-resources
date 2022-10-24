@@ -4,6 +4,10 @@ Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs
 
 https://youtu.be/daefaLgNkw0
 
+How Dictionaries Work (Advanced)
+
+https://www.oreilly.com/library/view/high-performance-python/9781449361747/ch04.html#dict_set_how_work
+
 ### Functions
 
 Is Python pass-by-reference or pass-by-value?
