@@ -1,3 +1,9 @@
+### Dictionaries
+
+Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs
+
+https://youtu.be/daefaLgNkw0
+
 ### Functions
 
 Is Python pass-by-reference or pass-by-value?
