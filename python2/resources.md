@@ -1,4 +1,4 @@
-### Loops
+### Loops
 
 Big-O notation in 5 minutes
 
