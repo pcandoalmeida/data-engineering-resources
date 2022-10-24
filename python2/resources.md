@@ -8,6 +8,10 @@ How Dictionaries Work (Advanced)
 
 https://www.oreilly.com/library/view/high-performance-python/9781449361747/ch04.html#dict_set_how_work
 
+How are Python's Built In Dictionaries Implemented? (Advanced)
+
+https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented
+
 ### Functions
 
 Is Python pass-by-reference or pass-by-value?
