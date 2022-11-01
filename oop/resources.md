@@ -19,3 +19,7 @@ https://youtu.be/JMWnTZ4plAo (A lot of good information here)
 Instance Initializer "__init__" method | Python OOP tutorial - Part 4
 
 https://youtu.be/Zz-7b_eBpz0
+
+Object Oriented Programming in Python Question / Exercise
+
+https://www.rithmschool.com/courses/python-fundamentals-part-2/python-object-oriented-programming-exercises
