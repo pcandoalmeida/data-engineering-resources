@@ -10,3 +10,6 @@ Learn to Efficiently Test ETL Pipelines
 
 https://youtu.be/uzVewG8M6r0
 
+The Test Pyramid, Data Engineering, and You!
+
+https://servian.dev/the-test-pyramid-and-data-engineering-with-julia-e4678c3f8dff
