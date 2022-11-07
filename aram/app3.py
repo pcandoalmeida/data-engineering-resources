@@ -2,13 +2,6 @@ import json
 import ast
 def update_item(selected_list, name_of_selected_list):
     print("")
-# #TODO add the order
-#     if name_of_selected_list == "orders":
-#         order = create_order(selected_list, name_of_selected_list)
-#         with open(f"data\{name_of_selected_list}.txt", "a") as itemsf:
-#             itemsf.write(f"\n{order}")
-#             return(f"New order has been added to {name_of_selected_list[:-1]} list")
-# # END OF THE TODO BIT
     valid_input = show_items_and_gen_valid_inputs(selected_list, name_of_selected_list)
     print(f"Enter the number for the {name_of_selected_list[:-1]} you want to replace: ")
     replacee = input()
@@ -37,7 +30,6 @@ to go back to go back to {name_of_selected_list[:-1]} menu: """).strip()
             with open(f"data\{name_of_selected_list}.txt", "w") as itemsf:
                 itemsf.writelines(lines)
             
-# def update_order
 def delete_item(selected_list, name_of_selected_list):
     print("")
     valid_input = show_items_and_gen_valid_inputs(selected_list, name_of_selected_list)
@@ -83,8 +75,8 @@ def show_items_and_gen_valid_inputs(selected_list, name_of_selected_list):
         valid_input.append("x")
     return valid_input
     print("")
-#TODO PRINT couriers list with index value for each courier
-# GET user input for courier index to select courier
+
+
 def create_order(selected_list, name_of_selected_list):
     order = {}
     order["customer_name"] = input("Enter the customer name: ")
@@ -284,8 +276,7 @@ to update or x to go back to main menu: """)
     else:
         updatee_str = selected_list[int(updatee)].replace("'", "\"")
         updatee_as_dict = json.loads(updatee_str)
-        #print(updatee)
-    if status: #If we are updating the status
+    if status: #If we are updating the status, comes passed from the order menu as optional param
         new_status = input(f"Enter the new status: ")
         if new_status.strip() != "":
             updatee_as_dict["status"] = new_status
