@@ -64,7 +64,7 @@ to replace or x to go back to main menu""")
         print(f"{name_of_selected_list[:-1]} number {deletee} is now deleted.")
         menu()
 
-#TODO create variant for nicely formatted order output and reuse index code
+
 def show_items_and_gen_valid_inputs(selected_list, name_of_selected_list):
     with open(f"data\{name_of_selected_list}.txt", "r") as itemsf:
         valid_input = []
@@ -83,13 +83,28 @@ def show_items_and_gen_valid_inputs(selected_list, name_of_selected_list):
         valid_input.append("x")
     return valid_input
     print("")
-
+#TODO PRINT couriers list with index value for each courier
+# GET user input for courier index to select courier
 def create_order(selected_list, name_of_selected_list):
     order = {}
     order["customer_name"] = input("Enter the customer name: ")
     order["customer_address"] = input("Enter the customer address: ")
     order["customer_phone"] = input("Enter the customer phone: ")
     order["status"] = "PREPARING"
+    couriers = []
+    with open("data\couriers.txt", "r+") as courierf:
+        for line in courierf:
+            couriers.append(line.strip("\n"))
+    valid_inputs = show_items_and_gen_valid_inputs(couriers, "couriers")
+    chosen_courier= input("Pleanse, choose a courier by entering their corresponding number above: ")
+    while chosen_courier not in valid_inputs:
+        print("Your choice was not valid or x to go back to the order menu.")
+        chosen_courier= input("Please, choose a courier by entering their corresponding number above: ")
+    if chosen_courier.lower() == "x":
+        order_menu()
+        return None
+    else:
+        order["courier"] = couriers[int(chosen_courier)]
     return order
 
     
@@ -270,7 +285,7 @@ to update or x to go back to main menu: """)
         updatee_str = selected_list[int(updatee)].replace("'", "\"")
         updatee_as_dict = json.loads(updatee_str)
         #print(updatee)
-    if status:
+    if status: #If we are updating the status
         new_status = input(f"Enter the new status: ")
         if new_status.strip() != "":
             updatee_as_dict["status"] = new_status
@@ -284,6 +299,20 @@ to update or x to go back to main menu: """)
         phone = input("Enter the customer phone: ")
         if phone.strip() != "":
             updatee_as_dict["customer_phone"] = phone
+        couriers = []
+        with open("data\couriers.txt", "r+") as courierf:
+            for line in courierf:
+                couriers.append(line.strip("\n"))
+        valid_inputs = show_items_and_gen_valid_inputs(couriers, "couriers")
+        chosen_courier= input("Pleanse, choose a courier by entering their corresponding number above: ")
+        while chosen_courier not in valid_inputs:
+            print("Your choice was not valid or x to go back to the order menu.")
+            chosen_courier= input("Please, choose a courier by entering their corresponding number above: ")
+        if chosen_courier.lower() == "x":
+            order_menu()
+            return None
+        else:
+            updatee_as_dict["courier"] = couriers[int(chosen_courier)]
     with open(f"data\{name_of_selected_list}.txt", "r") as itemsf:
             lines = itemsf.readlines()
     if int(updatee) == len(lines)-1:
