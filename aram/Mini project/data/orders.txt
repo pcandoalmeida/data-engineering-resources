@@ -1,3 +1,0 @@
-{"customer_name": "John","customer_address": "Unit 2, 12 Main Street, LONDON, WH1 2ER","customer_phone": "0789887334","status": "preparing"}
-{'customer_name': 'PEter', 'customer_address': 'ekfjdkjfd', 'customer_phone': '3432423', 'status': 'done'}
-{'customer_name': 'x', 'customer_address': 'x', 'customer_phone': 'x', 'status': 'x'}
