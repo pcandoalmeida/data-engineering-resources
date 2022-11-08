@@ -1,12 +1,20 @@
-from typing import MutableSequence
-import hashlib
-import sys
+import time
 
-def read_prod_file():
-    with open("products.txt", "r") as products:
-        products_contents = products.readlines()
-        for i in products_contents:
-            print(i)
+def product_list():
+    with open("products.txt", "r") as product_list:
+        products_contents = product_list.readlines()
+        for i,x in enumerate(products_contents):
+            print(i, x)
+
+def product_list_delete():
+    with open("products.txt", "r+") as product_list:
+        products_contents = product_list.readlines()
+        for i, x in enumerate(products_contents):
+            print(i, x)
+            del products_contents[i]  # use linenum - 1 if linenum starts from 1
+            product_list.seek(0)
+            product_list.truncate()
+            product_list.writelines(products_contents)
 
 def read_cour_file():
     with open("couriers.txt", "r") as couriers:
@@ -15,26 +23,17 @@ def read_cour_file():
             print(i)
 
 def write_prod_file():
-    with open("products.txt", "a+") as products:
-        for line in products:
-            products.write(line)
-            products.write("\n")
+    with open("products.txt", "a+") as products_list:
+        products_list.write(input("Whats the name of the new product? "))
+        products_list.write("\n")
 
 def write_cour_file():
-    with open("couriers.txt", "a+") as couriers:
-        couriers.writelines(input("Who would you like to add? "))
-        couriers.close()
-
-#Not sure which one to use ^
-# def write_cour_file():
-#     choice = input()
-#     with open("couriers.txt", "a+") as couriers:
-#         couriers.write(f"{choice}")
-
+    with open("couriers.txt", "a") as couriers:
+        couriers.write(input("Who would you like to add? "))
 
 orders = []
 
-product_list = ["Snickers", "Kit Kat", "Mars", "Bueno", "Ritter"]
+#product_list = ["Snickers", "Kit Kat", "Mars", "Bueno", "Ritter"]
 
 def product_menu():
     print( """
@@ -48,39 +47,37 @@ def product_menu():
     What would you like to do?
     
     """ )
-    product_option = int(input("Please select an option: "))
 
     while True:
+
+        product_option = int(input("Please select an option: "))
+
         if product_option == 0:
             menu()
 
         elif product_option == 1:
-            global product_list
-            print(product_list)
-            product_option = int(input("Would you like to do anything else: "))
+#            global product_list
+            product_list()
 
         elif product_option == 2:
-            print('What is the name of the new product? ')
-            item = input()
-            product_list.append(item)
-            print(product_list)
-            product_option = int(input("Would you like to do anything else: "))
+            write_prod_file()
+            product_list()
 
         elif product_option == 3:
-            print(product_list)
-            for product in range(len(product_list)):
-                print(f'-{product}- {product_list[product]}')
-            try:
-                to_delete = int(input("Please choose the number of the product you'd like to delete: "))
-                print(f"You have selected {product_list[to_delete]}")
+            product_list_delete()
+#            for product in range(len(product_list)):
+#                print(f'-{product}- {product_list[product]}')
+            # try:
+            #     to_delete = int(input("Please choose the number of the product you'd like to delete: "))
+            #     print(f"You have selected {product_list[to_delete]}")
             
-            except ValueError:
-                print("\nYou can only input integers (whole numbers) Please try again\n")
+            # except ValueError:
+            #     print("\nYou can only input integers (whole numbers) Please try again\n")
 
-            else:
-                product_list.pop(to_delete)
-                print(product_list)
-                product_option = int(input("Would you like to do anything else: "))
+            # else:
+            #     product_list.pop(to_delete)
+            #     print(product_list)
+            #     product_option = int(input("Would you like to do anything else: "))
 
         elif product_option == 4:
             for i in range(len(product_list)):
@@ -122,16 +119,17 @@ def order_menu():
     
     """ )
 
-    order_option = int(input("Please select an option: "))
-
     while True:
+
+        order_option = int(input("Please select an option: "))
     
         if order_option == 0:
             menu()
 
         elif order_option == 1:
             print(orders)
-            order_menu
+            time.sleep(5)
+            order_menu()
 
         elif order_option == 2:
             c_name = input("Please enter your name: ")
@@ -144,6 +142,7 @@ def order_menu():
                 "Status": "Preparing..."
             })
             print(orders)
+            time.sleep(5)
             order_menu()
             
 
@@ -155,6 +154,7 @@ def order_menu():
             order_status = input("Order status: ")
             orders[order_index]["Status"] = order_status
             print("Orders:", orders)
+            time.sleep(5)
             order_menu()
 
         elif order_option == 4:
@@ -197,21 +197,21 @@ def courier_menu():
     What would you like to do?
     
     """ )
-    courier_option = int(input("Please slect your option: "))
+    #courier_option = int(input("Please slect your option: "))
 
     while True:
+
+        courier_option = int(input("Please slect your option: "))
 
         if courier_option == 0:
             menu()
 
         if courier_option == 1:
-            choice = input("Please add the nname of your driver: ")
             read_cour_file()
-            exit
         
         if courier_option == 2:
             write_cour_file()
-            read_cour_file
+
 
 
 
