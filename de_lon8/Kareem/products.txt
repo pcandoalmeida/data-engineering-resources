@@ -1,7 +1,0 @@
-pizza
-cheese
-chocolate
-chicken
-pasta
-sausage
-roti
