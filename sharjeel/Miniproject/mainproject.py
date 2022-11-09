@@ -25,16 +25,16 @@ def product_list_update():
         lines = products_list.readlines()
         print(lines)
 
+def write_prod_file():
+    with open("products.txt", "a+") as products_list:
+        products_list.write(input("Whats the name of the new product? "))
+        products_list.write("\n")
+
 def read_cour_file():
     with open("couriers.txt", "r") as couriers:
         couriers_contents = couriers.readlines()
         for i in couriers_contents:
             print(i)
-
-def write_prod_file():
-    with open("products.txt", "a+") as products_list:
-        products_list.write(input("Whats the name of the new product? "))
-        products_list.write("\n")
 
 def write_cour_file():
     with open("couriers.txt", "a") as couriers:
@@ -66,6 +66,7 @@ def delete_courier_file():
                 print("line:", choice, "is not in the couriers")
 
 orders = []
+
 
 def product_menu():
     print( """
