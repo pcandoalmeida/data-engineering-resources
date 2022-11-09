@@ -4,17 +4,31 @@ def product_list():
     with open("products.txt", "r") as product_list:
         products_contents = product_list.readlines()
         for i,x in enumerate(products_contents):
-            print(i, x)
+            print(f"Number: {i}, Product: {x}")
 
 def product_list_delete():
     with open("products.txt", "r+") as product_list:
-        products_contents = product_list.readlines()
-        for i, x in enumerate(products_contents):
-            print(i, x)
-            del products_contents[i]  # use linenum - 1 if linenum starts from 1
-            product_list.seek(0)
-            product_list.truncate()
-            product_list.writelines(products_contents)
+        lines = product_list.readlines()
+        for i, x in enumerate(lines):
+            print(f"Number: {i}, Product: {x}")
+        choice = int(input("Choose the number of the product you'd like to delete: "))
+        if (choice <= len(lines)):
+            del lines[choice] 
+            with open("products.txt", "w") as product_list:
+                for line in lines:
+                    product_list.write(line)
+        else:
+            print("line:", choice, "is not in the products")
+
+def product_list_update():
+    with open("products.txt", "r") as products_list:
+        lines = products_list.readlines()
+        print(lines)
+
+def write_prod_file():
+    with open("products.txt", "a+") as products_list:
+        products_list.write(input("Whats the name of the new product? "))
+        products_list.write("\n")
 
 def read_cour_file():
     with open("couriers.txt", "r") as couriers:
@@ -22,18 +36,37 @@ def read_cour_file():
         for i in couriers_contents:
             print(i)
 
-def write_prod_file():
-    with open("products.txt", "a+") as products_list:
-        products_list.write(input("Whats the name of the new product? "))
-        products_list.write("\n")
-
 def write_cour_file():
     with open("couriers.txt", "a") as couriers:
         couriers.write(input("Who would you like to add? "))
 
+def replace_cour_file():
+    with open("couriers.txt", "r") as couriers:
+        lines = couriers.readlines()
+        for i, x in enumerate(lines):
+            print(f"Number: {i}, Courier: {x}")
+        choice = int(input("Choose the courier you'd like to replace "))
+        if (choice <= len(lines)):
+            lines[choice] = input("Please enter the name of the new courier: ")
+        else:
+            print("line:", choice, "is not in the couriers")
+
+def delete_courier_file():
+        with open("couriers.txt", "r+") as couriers:
+            lines = couriers.readlines()
+            for i, x in enumerate(lines):
+                print(f"Number: {i}, Courier: {x}")
+            choice = int(input("Choose the number of the product you'd like to delete: "))
+            if (choice <= len(lines)):
+                del lines[choice] 
+                with open("couriers.txt", "w") as couriers:
+                    for line in lines:
+                        couriers.write(line)
+            else:
+                print("line:", choice, "is not in the couriers")
+
 orders = []
 
-#product_list = ["Snickers", "Kit Kat", "Mars", "Bueno", "Ritter"]
 
 def product_menu():
     print( """
@@ -56,7 +89,6 @@ def product_menu():
             menu()
 
         elif product_option == 1:
-#            global product_list
             product_list()
 
         elif product_option == 2:
@@ -197,7 +229,6 @@ def courier_menu():
     What would you like to do?
     
     """ )
-    #courier_option = int(input("Please slect your option: "))
 
     while True:
 
@@ -212,7 +243,11 @@ def courier_menu():
         if courier_option == 2:
             write_cour_file()
 
-
+        if courier_option == 3:
+            delete_courier_file()
+        
+        if courier_option == 4:
+            replace_cour_file()
 
 
 
