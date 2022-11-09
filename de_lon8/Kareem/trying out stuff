@@ -1,0 +1,12 @@
+import json
+
+while True:
+    selection = int(input('Enter a number'))
+
+    if selection == 1:
+        with open ('orders.json') as orders_file:
+            orders = json.load(orders_file)
+            
+    if selection == 2:
+        with open('orders.json', 'w') as fp:
+            json.dump(orders, fp, indent = 4)
