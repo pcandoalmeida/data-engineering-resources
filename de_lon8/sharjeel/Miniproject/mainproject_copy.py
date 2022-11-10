@@ -1,34 +1,43 @@
 import time
+import csv
 
 def product_list():
-    with open("products.txt", "r") as product_list:
-        products_contents = product_list.readlines()
+    with open("products.csv", "w+") as product_list:
+        products_contents = csv.reader(product_list)
         for i,x in enumerate(products_contents):
             print(f"Number: {i}, Product: {x}")
 
 def product_list_delete():
-    with open("products.txt", "r+") as product_list:
-        lines = product_list.readlines()
+    with open("products.csv", "r+") as product_list:
+        lines = csv.reader(product_list)
         for i, x in enumerate(lines):
             print(f"Number: {i}, Product: {x}")
         choice = int(input("Choose the number of the product you'd like to delete: "))
         if (choice <= len(lines)):
             del lines[choice] 
-            with open("products.txt", "w") as product_list:
+            with open("products.csv", "w") as product_list:
                 for line in lines:
-                    product_list.write(line)
+                    product_list.DictWrite(line)
         else:
             print("line:", choice, "is not in the products")
 
 def product_list_update():
-    with open("products.txt", "r") as products_list:
-        lines = products_list.readlines()
-        print(lines)
+    with open("products.txt", "r") as products:
+        lines = products.readlines()
+        for i, x in enumerate(lines):
+            print(f"Number: {i}, Products: {x}")
+        choice = int(input("Choose the courier you'd like to replace "))
+        if (choice <= len(lines)):
+            lines[choice] = input("Please enter the name of the new products: ")
+        else:
+            print("line:", choice, "is not among the products")
 
 def write_prod_file():
-    with open("products.txt", "a+") as products_list:
-        products_list.write(input("Whats the name of the new product? "))
-        products_list.write("\n")
+    with open("products.csv", "a+", newline='') as products_list:
+        writer = csv.writer(products_list)
+      #  writer.writerow["Product: "]
+        user_input = input("Whats the name of the new product? ")
+        writer.writerows(user_input)
 
 def read_cour_file():
     with open("couriers.txt", "r") as couriers:
@@ -97,40 +106,9 @@ def product_menu():
 
         elif product_option == 3:
             product_list_delete()
-#            for product in range(len(product_list)):
-#                print(f'-{product}- {product_list[product]}')
-            # try:
-            #     to_delete = int(input("Please choose the number of the product you'd like to delete: "))
-            #     print(f"You have selected {product_list[to_delete]}")
-            
-            # except ValueError:
-            #     print("\nYou can only input integers (whole numbers) Please try again\n")
-
-            # else:
-            #     product_list.pop(to_delete)
-            #     print(product_list)
-            #     product_option = int(input("Would you like to do anything else: "))
 
         elif product_option == 4:
-            for i in range(len(product_list)):
-                print(f'-{i}- {product_list[i]}')
-
-            while True:
-
-                try:
-                    to_change = int(input('Please choose the product from the available options. '))
-                    print(f'You have selected {product_list[to_change]}: ')
-
-                except IndexError:
-                    print("Oh no, this product doesn't exit, please try again!")
-
-                except ValueError:
-                    print("\nYou can only input integers (whole numbers) Please try again\n")
-
-                else:
-                    product_list[to_change] = input('Enter the new product name: ')
-                    print(product_list)
-                    product_option = int(input("Would you like to do anything else: "))
+            product_list_update()
 
         else:
             print("""Uh-oh Invalid option
@@ -167,10 +145,12 @@ def order_menu():
             c_name = input("Please enter your name: ")
             c_address = input("Please enter your address: ")
             c_phone_number = input("Please enter your phone number: ")
+            # print courier list and add to order
             orders.append({
                 "customer_name": c_name,
                 "customer_address": c_address,
                 "customer_phone_number": c_phone_number,
+                "courier: ",
                 "Status": "Preparing..."
             })
             print(orders)
@@ -200,6 +180,7 @@ def order_menu():
                 if order_update_input:
                     orders[order_index][key] = order_update_input
             print(orders)
+            time.sleep(5)
             order_menu()
 
         elif order_option == 5:
@@ -209,6 +190,7 @@ def order_menu():
             order_index = int(input(f"Select the order you'd like to delete: "))
             del orders[order_index]
             print(orders)
+            time.sleep(5)
             order_menu()
 
         else:
@@ -239,15 +221,23 @@ def courier_menu():
 
         if courier_option == 1:
             read_cour_file()
+            time.sleep(5)
+            courier_menu()
         
         if courier_option == 2:
             write_cour_file()
+            time.sleep(5)
+            courier_menu()
 
         if courier_option == 3:
             delete_courier_file()
-        
+            time.sleep(5)
+            courier_menu()
+
         if courier_option == 4:
             replace_cour_file()
+            time.sleep(5)
+            courier_menu()
 
 
 
@@ -275,7 +265,7 @@ def menu():
             courier_menu()
 
         else:
-            print("""Oh oh, invalid option
+            print("""Uh oh, invalid option
             Please choose one of the following:""")
             menu()
     
