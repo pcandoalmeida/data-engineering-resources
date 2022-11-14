@@ -2,6 +2,8 @@ pizza
 cheese
 chocolate
 chicken
-pasta
+coke
 sausage
 saucey
+pancakes
+fanta

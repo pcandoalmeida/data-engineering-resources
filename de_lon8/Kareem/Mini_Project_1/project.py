@@ -1,3 +1,10 @@
+#Creating a new item
+def createNew():
+    new_addition = input('')
+    new_addition = new_addition.lower()
+    return new_addition
+
+
 #LOAD products list from products.txt
 productsFile = open('products.txt', 'r')
 productsLine = productsFile.readlines()
@@ -15,7 +22,9 @@ for c_line in courierLine:
     c_line = c_line.strip()
     courier.append(c_line)
 
-# An empty dictionary to append the orders
+    #The above can be replace with a functions to not be repeating 
+
+# An empty list to append the orders
 orders = []
 
 
@@ -23,6 +32,7 @@ orders = []
 selection = 0
     
 #Printing the main menu
+#Put the below on one line 
 print('Welcome to the main menu')
 while selection == 0 :
     print('')
@@ -72,16 +82,15 @@ while selection == 0 :
             
             #Takes everyproduct and prints it to a new line.
             if product_menu_choice == 1:
-                print(products)
+                print(products) #rename this pring products list
 
             
             #Creating new items in the list. 
             elif product_menu_choice == 2:
 
                 #Code here verifys the correct spelling and puts everything into a lower case format.
-                print('') 
-                new_item = input('Please enter the name of the item that you would like to add: ')
-                newitem = new_item.lower()
+                print('Please enter the name of the product that you would like to add.')
+                newitem = createNew()
                 products.append(newitem)
                     
 
@@ -90,7 +99,7 @@ while selection == 0 :
 
                 item_number = 0
                 for i in products:
-                    print (item_number, ':', i)
+                    print (item_number, ':', i) #change the name i to something else that is named better
                     item_number = item_number + 1
 
                 to_amend = int(input('Which item number would you like to change?: '))
@@ -141,9 +150,8 @@ while selection == 0 :
             elif courier_menu_choice == 2:
 
                 #Code here verifys the correct spelling and puts everything into a lower case format.
-                print('') 
-                new_courier = input('Please enter the name of the item that you would like to add: ')
-                newcourier = new_courier.lower()
+                print('Please enter the name of the courier that you would like to add.')
+                newcourier = createNew()
                 courier.append(newcourier)
                     
 
