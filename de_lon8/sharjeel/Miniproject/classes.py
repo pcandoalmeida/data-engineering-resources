@@ -1,6 +1,6 @@
 import sys
 
-class MainMenu():
+class Menu():
 
     def __init__(self, title, options):
         self.title = title
@@ -8,16 +8,16 @@ class MainMenu():
                 "0": self.quit,
                 "1": self.option_menu,
                 "2": self.order_menu,
-                "3": self.courier_menu,
+                "3": self.courier_menu
                 }
 
     def display_menu(self):
         print("""
 Main Menu
 0. Quit
-2. Open options menu
-3. Open orders menu
-4. Open couriers menu
+1. Open options menu
+2. Open orders menu
+3. Open couriers menu
 """)
 
     def run(self):
@@ -32,7 +32,7 @@ Main Menu
                 print(f"{choice} is not a valid option")
 
     def quit(self):
-        print("Thank you for using your notebook today.")
+        print("Thank you for using your cafe today.")
         sys.exit(0)
 
 

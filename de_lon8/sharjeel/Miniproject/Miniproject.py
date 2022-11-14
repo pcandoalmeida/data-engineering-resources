@@ -1,7 +1,7 @@
 product_list = ['Snickers', 'Kit Kat', 'Mars', 'Bueno', 'Ritter']
 
 cmd = input('Welcome to the product manager 2000!'
-            ' Would you like to manage the products? 1 for Yes or 2 for No ').split(' ')
+            ' Would you like to manage the products? 1 for Yes or 2 for No ')
 while cmd[0] != '2':
     choice = input("""
                   1: Show Products
