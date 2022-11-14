@@ -10,4 +10,9 @@ https://youtu.be/GFQaEYEc8_8
 Notes on DDIA
 https://github.com/keyvanakbary/learning-notes/blob/master/books/designing-data-intensive-applications.md#data-models-and-query-language
 
+How To Choose The Right Database
+https://youtu.be/kkeFE6iRfMM
+
+CAP Theorem
+https://youtu.be/k-Yaq8AHlFA
 
