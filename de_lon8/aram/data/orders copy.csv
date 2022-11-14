@@ -1,0 +1,4 @@
+customer_name,customer_address,customer_phone,courier,status,items
+Peter, Address1, 945448542329584, Peter1, PREPARING, "1,2,3"
+Mary, Address2, 948549584, John, Ready, "2,2,3"
+John, Address3, 00000000000, Jenny, GOOO, "6,6,3"

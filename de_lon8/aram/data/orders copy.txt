@@ -1,0 +1,5 @@
+{'customer_name': 'John', 'customer_address': 'Unit 2, 12 Main Street, LONDON, WH1 2ER', 'customer_phone': '0789887334', 'status': 'DONE'}
+{'customer_name': 'Hello', 'customer_address': 'nononono', 'customer_phone': '2324345', 'status': 'PREPARING'}
+{'customer_name': 'Melon', 'customer_address': 'aStreet', 'customer_phone': '3454354534543534534534453', 'status': ''}
+{'customer_name': 'NotMElon', 'customer_address': 'nosé', 'customer_phone': '98978989898', 'status': 'DONE'}
+{'customer_name': 'Peter', 'customer_address': 'jkdfhjdhfdj dskjhfjdh', 'customer_phone': '453645654', 'status': 'PREPARING'}
