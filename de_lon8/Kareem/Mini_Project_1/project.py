@@ -1,3 +1,10 @@
+#Creating a new item
+def createNew():
+    new_addition = input('')
+    new_addition = new_addition.lower()
+    return new_addition
+
+
 #LOAD products list from products.txt
 productsFile = open('products.txt', 'r')
 productsLine = productsFile.readlines()
@@ -15,12 +22,17 @@ for c_line in courierLine:
     c_line = c_line.strip()
     courier.append(c_line)
 
+    #The above can be replace with a functions to not be repeating 
+
+# An empty list to append the orders
+orders = []
 
 
 
 selection = 0
     
 #Printing the main menu
+#Put the below on one line 
 print('Welcome to the main menu')
 while selection == 0 :
     print('')
@@ -30,6 +42,7 @@ while selection == 0 :
     print('To enter the ORDERS MENU select 2')
     print('To enter the COURIERS MENU select 3')
     
+
     #Get the choice from the main menu
 
     #Save everything for both files and then exit the APP
@@ -69,16 +82,15 @@ while selection == 0 :
             
             #Takes everyproduct and prints it to a new line.
             if product_menu_choice == 1:
-                print(products)
+                print(products) #rename this pring products list
 
             
             #Creating new items in the list. 
             elif product_menu_choice == 2:
 
                 #Code here verifys the correct spelling and puts everything into a lower case format.
-                print('') 
-                new_item = input('Please enter the name of the item that you would like to add: ')
-                newitem = new_item.lower()
+                print('Please enter the name of the product that you would like to add.')
+                newitem = createNew()
                 products.append(newitem)
                     
 
@@ -87,7 +99,7 @@ while selection == 0 :
 
                 item_number = 0
                 for i in products:
-                    print (item_number, ':', i)
+                    print (item_number, ':', i) #change the name i to something else that is named better
                     item_number = item_number + 1
 
                 to_amend = int(input('Which item number would you like to change?: '))
@@ -138,9 +150,8 @@ while selection == 0 :
             elif courier_menu_choice == 2:
 
                 #Code here verifys the correct spelling and puts everything into a lower case format.
-                print('') 
-                new_courier = input('Please enter the name of the item that you would like to add: ')
-                newcourier = new_courier.lower()
+                print('Please enter the name of the courier that you would like to add.')
+                newcourier = createNew()
                 courier.append(newcourier)
                     
 
@@ -173,43 +184,80 @@ while selection == 0 :
                 print (courier)
 
 
-    # if choice == 2:
-    #     while True:
-    #         print ('')
-    #         print ('')
-    #         print ('ORDERS MENU')
-    #         print ('0. Return to the MAIN MENU.')
-    #         print ('1. To PRINT all orders')
-    #         print ('2. To CREATE a new order') 
-    #         print ('3. To UPDATE an order')
-    #         print ('4. To DELETE an order')
-    #         print('') 
+    if choice == 2:
+        while True:
+            print ('')
+            print ('')
+            print ('ORDERS MENU')
+            print ('0. Return to the MAIN MENU.')
+            print ('1. To PRINT all orders')
+            print ('2. To CREATE a new order') 
+            print ('3. To UPDATE STATUS')
+            print ('4. To UPDATE an order')
+            print ('5. To DELETE an order') 
 
-    #         orders_menu_choice = int(input(''))
+            orders_menu_choice = int(input(''))
 
-    #         if orders_menu_choice == 0:
-    #             break
+            #Return to previous menu
+            if orders_menu_choice == 0:
+                break
+            
+            #Prints all orders
+            elif orders_menu_choice == 1:
+                print(orders)
 
-    #         elif orders_menu_choice == 1:
-    #             print(orders)
-
-    #         elif orders_menu_choice == 2:
-    #             order_name = input('Please enter the customer name: ')
-    #             order_address = (input('Enter the address number: '))
-    #             order_phone_number = input('Please enter the phone number: ')
-    #             order_status = 'PREPARING'
+            #Adding a new order
+            elif orders_menu_choice == 2:
+                order_name = input('Please enter the customer name: ')
+                order_address = (input('Enter the address number: '))
+                order_phone_number = input('Please enter the phone number: ')
+                order_status = 'PREPARING'
                 
-    #             single_order = {'Name': order_name, 'Address' : order_address, 'Phone Number' : order_phone_number, 'Status' : order_status}
+                single_order = {'Name': order_name, 'Address' : order_address, 'Phone Number' : order_phone_number, 'Status' : order_status}
 
-    #             orders.append(single_order)
+                orders.append(single_order)
 
-    #         elif orders_menu_choice == 3:
-    #             y = json.loads(orders)
-    #             print(y)
+            #Updating existing orderstatus
+            elif orders_menu_choice == 3:
+                order_number = 0
+                for i in orders:
+                    print (order_number, ':', i)
+                    order_number = order_number + 1
 
-    #         elif orders_menu_choice == 4:
-    #             print('')
+                to_amend = int(input('Which status would you like to change?: '))
                 
-    #         elif orders_menu_choice == 5:
-    #             print('')
+                status_progression = ('PREPARING', 'READY')
+                progression = 0
+                for i in status_progression:
+                    print (progression, ':', status_progression[progression])
+                    progression = progression + 1
 
+                amended_order = int(input ('What would you like to change the status to?'))
+
+                orders[to_amend]['Status'] = status_progression[amended_order]
+                
+                print(orders)
+
+            # #This is to update the existing orders
+            # elif orders_menu_choice == 4:
+            #     order_number = 0
+            #     for i in orders:
+            #         print (order_number, ':', i)
+            #         order_number = order_number + 1
+                
+            #     orders_updates = ('Name', 'Address', 'Phone Number')
+            #     updated_order = int(input('Which one of the inputs would you like to change? '))
+                
+            #     for key, value in orders[updated_order]:
+            #         print (key, value)
+                
+            
+            #This is deleting an entire order from the orders menu
+            elif orders_menu_choice == 5:
+                order_number = 0
+                for i in orders:
+                    print (order_number, ':', i)
+                    order_number = order_number + 1
+
+                deletingorder = int(input('Which order would you like to delete? '))
+                del orders[deletingorder]

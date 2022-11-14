@@ -1,0 +1,7 @@
+{'customer_name': 'John', 'customer_address': 'Unit 2, 12 Main Street, LONDON, WH1 2ER', 'customer_phone': '0789887334', 'status': 'DONE'}
+{'customer_name': 'Hello', 'customer_address': 'nononono', 'customer_phone': '2324345', 'status': 'PREPARING'}
+{'customer_name': 'Melon', 'customer_address': 'aStreet', 'customer_phone': '3454354534543534534534453', 'status': ''}
+{'customer_name': 'djfhdjf', 'customer_address': 'kdkhfjdhfjdhfd', 'customer_phone': '87544857485', 'status': 'PREPARING', 'courier': '0'}
+{'customer_name': 'dkhjfldshf', 'customer_address': 'ldfhdslhf', 'customer_phone': '453635', 'status': 'PREPARING', 'courier': 'John'}
+{'customer_name': 'Melon', 'customer_address': 'Street2', 'customer_phone': '7098708', 'status': 'DONE', 'courier': 'JC'}
+{'customer_name': 'jdhfjdhf', 'customer_address': 'DKJFKDJSF', 'customer_phone': '459346', 'status': 'PREPARING', 'courier': 'JC'}

@@ -1,0 +1,4 @@
+customer_name,customer_address,customer_phone,courier,status,items
+MAMON,ADDRESS4,94856954586,1,PREPARING,32434
+Mary,"Mary's address, in flat 2",Mary's phone,2,Ready,"4,5,6"
+John,Address3,00000000000,1,GOOO,3
