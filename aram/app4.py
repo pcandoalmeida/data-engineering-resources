@@ -78,6 +78,8 @@ class Item():
 
     def show_items(self) -> None:
         list_of_dict = self.get_csv_and_return_as_list_of_dict()
+        if list_of_dict == []:
+            print(f"There are no {self.type}s currently in the system")
         for num, line in enumerate(list_of_dict):      
             print(f"{self.type[:-1].capitalize()} n.{num+1}")
             for key, value in line.items():
@@ -88,13 +90,24 @@ class Item():
     def asdict(self):
         pass
 
+    def update_attributes(self) -> dict:
+        updatee_as_dict = self.asdict()
+        print(updatee_as_dict)
+        for key, value in updatee_as_dict.items():
+            print(key, value)
+            key_4_string = key.replace("_", " ")
+            newValue = input(f"Enter the {key_4_string} ")
+            while newValue == "":
+                newValue = input("Not a valid value. Enter another: ")    
+            updatee_as_dict[key] = newValue
+        return  updatee_as_dict
 
 
     def add_item_to_file(self): 
 #TODO this function does not add a line the previous line does not have a break line character
         file_exists = os.path.isfile(f"data\{self.type}.csv")
         #field_names = self.get_headers()
-        an_item = self.asdict()
+        an_item = self.update_attributes()
         #print("data file empty is", data_file.empty)                
         if file_exists and os.stat(f"data\{self.type}.csv").st_size != 0: #file exists and it is not empty
             with open(f"data\{self.type}.csv", "a", newline='') as csvfile:
