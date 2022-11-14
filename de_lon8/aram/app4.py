@@ -40,7 +40,9 @@ class Item():
     def check_valid_input(self, user_input : str, valid_inputs : list) -> str: 
         while user_input not in valid_inputs and user_input.capitalize() != "X" :
             print("Your choice was not valid or x to go back to the main menu.")
-            user_input = input(f"Please, choose a {self.type} by entering their corresponding number above: ")
+            print(valid_inputs)
+            print(user_input)
+            user_input = input(f"Please, choose a {self.type[:-1]} by entering the corresponding number above: ")
         if user_input.lower() == "x":
             return ""
         else:
@@ -123,6 +125,7 @@ class Item():
         an_item = Courier()
         an_item.show_items()
         valid_inputs = an_item.gen_valid_inputs()
+        valid_inputs.append("")
         chosen_item = input("Enter the number for your courier of choice: ")
         valid_inputs = an_item.check_valid_input(chosen_item,valid_inputs)
         if chosen_item != "":
@@ -136,11 +139,15 @@ class Item():
         chosen_item = input("Enter the number for a product of your choice: ")
         item_list_as_str = ""
         while chosen_item != "d":
-            chosen_item = input("Enter the number for a product you want or d if you are done: ")
-            valid_inputs = an_item.check_valid_input(chosen_item,valid_inputs)
-            item_list_as_str += "," + chosen_item
+            chosen_item = input("Enter the number for another product you want or d if you are done: ")
+            print("These are the valid inputs:", valid_inputs)
+            chosen_item = an_item.check_valid_input(chosen_item,valid_inputs)
+            if chosen_item != "d":
+                item_list_as_str += chosen_item + ","
+            else:
+                break
         if chosen_item != "":
-            return item_list_as_str 
+            return item_list_as_str[:-1] 
 
 
     def check_if_input_already_exists(self, user_input : str, selected_list : list) -> str: 
